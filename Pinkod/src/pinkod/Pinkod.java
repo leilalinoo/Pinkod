@@ -1,6 +1,7 @@
 package pinkod;
 
 import java.util.Scanner;
+import javax.management.StringValueExp;
 
 public class Pinkod {
 
@@ -24,9 +25,8 @@ public class Pinkod {
         System.out.print("Kód megadása: ");
         }while(szam > 4 && szam < 7 && probaSzam < 3);*/
 
-        boolean helyesFormatum = szamE(szam);
-
-        while (!jo && helyesFormatum != true) {
+        //boolean helyesFormatum = szamE(szam);
+        while (!jo /*&& helyesFormatum != true*/) {
             System.out.print("Kód megadása: ");
             szam = sc.nextLine();
             if (szam.length() > 3 && szam.length() < 7) {
@@ -57,13 +57,33 @@ public class Pinkod {
 
     }
 
-    private static boolean szamE(String jelszo) {
+    private static void keveres() {
+        int[] kevert = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+    }
+
+    /*  private static int be2(){
+        System.out.print("Kód megadása: ");
+        int jel = sc.nextInt();
+        String szam = String.valueOf(jel);
+        boolean jo = szam.length() > 3 && szam.length() < 7;
+        
+         while (!jo /*&& helyesFormatum != true) {
+            System.out.print("Kód megadása: ");
+            szam = sc.nextLine();
+            if (szam.length() > 3 && szam.length() < 7) {
+                jo = true;
+            }
+        }
+        System.out.println("Jelszó mentve!\n");
+        
+        return 2;
+    }*/
+
+ /*private static boolean szamE(String jelszo) {
         char karakter = '.';
         String betu = "";
         for (int i = 0; i < jelszo.length(); i++) {
-            /* karakter = jelszo.charAt(i);
-            boolean ez = karakter.*/
-            //betu = Integer.parseInt(jelszo.charAt(i));
 
         }
 
@@ -74,6 +94,5 @@ public class Pinkod {
             return false;
         }
 
-    }
-
+    }*/
 }
